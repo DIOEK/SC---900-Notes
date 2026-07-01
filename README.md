@@ -40,6 +40,25 @@ Confidentiality: Making sure that data can only be seen by the correct eyes. Enc
 
 Integrity: The data must be as it should be, not tampered by third parties. Not only malicious actors can compromise this step, but also bugs or network problems during transmission. Cryptographic hashing, audit logs and database transaction controls make sure of the part of the triad.
 
+Zero-Thrust Model
+
+Trust no one, verify everything. That means basically: there are no safe spots, even inside a network or a corporation and security can never be relaxed. Basically with porous network boundaries being a thing (work from home, external datacenters, personal apparel being used for work), security providers had to addapt to a point where there can be no more trust even inside of the network since the danger of lateral movement is so large.
+
+Three guiding principles of ZT
+Explicit verification: basically all signals warrat authentication such as locality, device and indentity. These are called signals and all of them must be evaluated.
+Use least privilege access: JIT(Just In Time) access, the act of giving access to something only when it's needed and then taking it back. And JEA(Just Enough Acess) giving only necessary access, no more.
+Assume Breach: Assume you will be invaded some time, always assume the worst.
+
+Seven Pillars of ZT
+ * Identities, may be Users, Services or Devices. When an idendity attempts to access a resource, it must be verified and authenticated before access is granted.
+ * Devices create surface area. Every device is a possible entry-point.
+ * Applications are the way data is used. Apps also must be authenticated, reviwed and monitored.
+ * Infrastructure wether on premisses or cloud infrastructure is the same: attack surface.Configuration compliance, unusual behavior and version currency must be used to keep track of off it. JIT access limits window of exposure. Telemetry allows for attack detection.
+ * Networks must be segmented so that the compromise of on aspect of the netwrok doesn't compromise the whole of it.
+ * VIsibility Automation and orchestration tie all the other pillars togheter and allows for easier threat acessment. This pillar leads to the creation of a Security information and event management (SIEM) and security orchestration, automated response (SOAR). The SIEM correlates all pillars to detect threats while SOAR triggers allow for instant response.
+
+ 
+
 Availability: Making sure the when data is needed, it will be available. It can be threatened by DDoS attacks that flood services with traffic until they stop responding, ransomware that encrypts data until a ransom is paid, hardware failures, software bugs, and natural disasters. Controls that support availability include redundant infrastructure, load balancing, automatic failover, regular backups and tested recovery plans, and DDoS protection services.
 
 Many attacks will threaten more than one piece of the triad
