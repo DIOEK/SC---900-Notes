@@ -40,6 +40,11 @@ Confidentiality: Making sure that data can only be seen by the correct eyes. Enc
 
 Integrity: The data must be as it should be, not tampered by third parties. Not only malicious actors can compromise this step, but also bugs or network problems during transmission. Cryptographic hashing, audit logs and database transaction controls make sure of the part of the triad.
 
+Availability: Making sure the when data is needed, it will be available. It can be threatened by DDoS attacks that flood services with traffic until they stop responding, ransomware that encrypts data until a ransom is paid, hardware failures, software bugs, and natural disasters. Controls that support availability include redundant infrastructure, load balancing, automatic failover, regular backups and tested recovery plans, and DDoS protection services.
+
+Many attacks will threaten more than one piece of the triad
+
+
 Zero-Thrust Model
 
 Trust no one, verify everything. That means basically: there are no safe spots, even inside a network or a corporation and security can never be relaxed. Basically with porous network boundaries being a thing (work from home, external datacenters, personal apparel being used for work), security providers had to addapt to a point where there can be no more trust even inside of the network since the danger of lateral movement is so large.
@@ -57,8 +62,30 @@ Seven Pillars of ZT
  * Networks must be segmented so that the compromise of on aspect of the netwrok doesn't compromise the whole of it.
  * VIsibility Automation and orchestration tie all the other pillars togheter and allows for easier threat acessment. This pillar leads to the creation of a Security information and event management (SIEM) and security orchestration, automated response (SOAR). The SIEM correlates all pillars to detect threats while SOAR triggers allow for instant response.
 
+Cryptopgraphy and Hash
+
+Encryption is to act to make data unreadable to unauthorized personnel. To use encrypted data it must be decrypted and for that the user must be in possession of a cryptographic key.
+
+There are two types of encryption: symmetric and assymetric.
+
+Symmetric encryption: there only one key for both decryption and encryption, that makes symmetric encryptption faster and well suited for vasta ammounts of data. It is also less secure, because sending the unic key over a network might be unsafe
+Assymetric encryption: uses a key pair, one for encyption and other for decryption. The keys are mathematically related but you cannot derive one from the other. The public key encrypts while the private key decrypts. 
+Data encrypted with the public key can only be decrypted with the corresponding private key.
+Data signed with the private key can be verified with the corresponding public key.
+Anyone can know the public key, therefore anyone can encrypt, but only you have the private key so only you can decrypt the data.
+Assymetric encryption is used in many procols day to day, such as ssh and https.
+
+Digital signatures are made possible by assymetric encryption, this means that anyone that has access to the public key can  verify the authenticity and integrity of data. Authenticity means that the data was sent by the expected sender. Integrity means that data sent has not been tampered with.
+
+ * Encryption by data state
+ Data at rest: data stored at a physical device or a storage account is encrypted so if an attacker has access to ir but not to the keys of encryption, the data remains unnavailable to him.
+ Data in transit: encryption of data moving to one location to another. Meaning that data is unreadale to anyone that can intercept it over the network. HTTPS, VPN and TLS all aplly this principle.
+ Data in use: data loaded into a computers memory or being worked on by a CPU. Generally here data is decrypted. Encryption of data in use is achieved through confidential computing technologies that create protected execution environments, sometimes called secure enclaves, where data can be processed without being exposed even to the operating system or hypervisor.
+
+Key storage. NEVER storage the key at the sma place as te data it encrypts. Use dedicated hardware for key storage. Rotate keys often, allways change keys. Controll who has access to keys, specially private keys. Azure Key vault is an azure service for key storage.
+
+ * Hashing
+ Hashing converts data to a fixed-lenght string of characters called a hash. This process is non reversible, you cannot reverse a hash into the original imput, it is usefull for verifying data that you don't actually need to use.
+ Hashing is very much used to secure passwords. When an user logs in the system passes the input password and compares the resulting hash with the original stored hash. SO the original password is never stored anywhere. However, basic hashing has a known vulnerability: because hash functions are deterministic, attackers can precompute hashes for millions of common passwords and look them up in tables—called rainbow tables or dictionary attacks—to find matches.
+ Salting: Since rainbow tables are a thing. Passwords are usually salted, this means that a salt is a unique, randomly generated value created for each individual password and added to it before hashing. Since every password recieves a different salt two users with the same passwrod will generate different hashes.This makes precomputed rainbow tables ineffective, because the attacker would need a separate lookup table for every possible salt value. (but no impossible)
  
-
-Availability: Making sure the when data is needed, it will be available. It can be threatened by DDoS attacks that flood services with traffic until they stop responding, ransomware that encrypts data until a ransom is paid, hardware failures, software bugs, and natural disasters. Controls that support availability include redundant infrastructure, load balancing, automatic failover, regular backups and tested recovery plans, and DDoS protection services.
-
-Many attacks will threaten more than one piece of the triad
