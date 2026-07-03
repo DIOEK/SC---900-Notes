@@ -88,4 +88,25 @@ Key storage. NEVER storage the key at the sma place as te data it encrypts. Use 
  Hashing converts data to a fixed-lenght string of characters called a hash. This process is non reversible, you cannot reverse a hash into the original imput, it is usefull for verifying data that you don't actually need to use.
  Hashing is very much used to secure passwords. When an user logs in the system passes the input password and compares the resulting hash with the original stored hash. SO the original password is never stored anywhere. However, basic hashing has a known vulnerability: because hash functions are deterministic, attackers can precompute hashes for millions of common passwords and look them up in tables—called rainbow tables or dictionary attacks—to find matches.
  Salting: Since rainbow tables are a thing. Passwords are usually salted, this means that a salt is a unique, randomly generated value created for each individual password and added to it before hashing. Since every password recieves a different salt two users with the same passwrod will generate different hashes.This makes precomputed rainbow tables ineffective, because the attacker would need a separate lookup table for every possible salt value. (but no impossible)
- 
+
+ Descrive governance, risk, and compliance(GRC) concepts
+
+  * Governance, risk, and compliance (GRC): the path organizations must follow so they can navigate the threats to security, both internal and external.
+  Governance - system of rules practices and processes an organization uses to direct and control it's activities. In the security context, some examples would be: defining policies for data is classified, handled and retained, establishing standarts for identity and access management across the organization, creating approval processes, assigning ownership and accountability, setting the overall direction for the organization's security strategy.
+  * Risk management - process of identifying, assessing and responding to threats or events that can negatively impact organizational objectives and or customer trust. Organizations face risk from both external and internal sources.
+   * Identifying - discovering potential risks to the organization's systems
+   * Assess - Evaluate risk based on it's potential impact and likelyhood of it ocurring.
+   * Respond - Developing a plan for each respective risk.
+   * Monitor - Continuously track identified risks, measure the effectiveness of controls, and update the assessment as the environment changes.
+  * Compliance - Compliance refers to adherence to the laws, regulations, standards, and policies that apply to an organization based on its industry, geography, and the types of data it handles.
+  
+  Some familiar compliance frameworks and regulations include:
+
+    HIPAA (Health Insurance Portability and Accountability Act): US regulations governing the protection and handling of health information.
+    ISO 27001: An international standard for information security management systems.
+    SOC 2 (Service Organization Control 2): An auditing standard for service providers that store or process customer data.
+
+  Compliance and security are not the same. Compliance reffers to the minimum regulated by law. Security goes beyond it encompasses all the processes, technologies, and practices that protect data and systems from threats.
+  Data residency: refers to where data can be stored and how and when it can be transferred, processed, or accessed internationally.
+  Data sovereignty: Data sovereignty refers to the concept that data is subject to the laws and regulations of the country/region where it's physically collected, held, or processed.
+  Data privacy: Privacy refers to the appropriate handling of personal data—any information that relates to an identified or identifiable individual. 
