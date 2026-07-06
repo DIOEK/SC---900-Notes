@@ -105,8 +105,45 @@ Key storage. NEVER storage the key at the sma place as te data it encrypts. Use 
     HIPAA (Health Insurance Portability and Accountability Act): US regulations governing the protection and handling of health information.
     ISO 27001: An international standard for information security management systems.
     SOC 2 (Service Organization Control 2): An auditing standard for service providers that store or process customer data.
+    
 
   Compliance and security are not the same. Compliance reffers to the minimum regulated by law. Security goes beyond it encompasses all the processes, technologies, and practices that protect data and systems from threats.
   Data residency: refers to where data can be stored and how and when it can be transferred, processed, or accessed internationally.
   Data sovereignty: Data sovereignty refers to the concept that data is subject to the laws and regulations of the country/region where it's physically collected, held, or processed.
   Data privacy: Privacy refers to the appropriate handling of personal data—any information that relates to an identified or identifiable individual. 
+
+  * Microsoft Entra
+   It is a family of identity and Network Access Products.
+   Covers: identity, governance, verified credentials, secure network access and identites for AI agents.
+
+  * Microsoft Entra Product family
+   * Zero Trust Access Controls
+     * Microsoft Entra ID: It's a cloud-based identity and access management service that provides authentication, single sign-on (SSO), policy enforcement, and protection for users, devices, apps, and resources. If you use most of the Microsoft products such as Office 365, Azure or Dynamics CRM Online, you are already using Microsoft Entra ID. Non custom entra-Id domains are like: contoso.onmicrosoft.com
+     * Microsoft Entra Domain Services: Entra ID for legate windows server software.
+   * Secure access for employess: governance
+    * Microsoft Entra Private Access: allows for private remote acess to company resources with no need for a VPN, like a printer for example.
+    * Microsoft Entra Internet Access: allows and secure access fot web based and non web based SaaS.
+    * Microsoft Entra ID Governance: simplifies identity and permissions management by automating access requests, assingments and reviews. It also helps protec critical assets via lifecycle management.
+    * Microsoft Entra ID Protection: deals with risk identiry based risks, such as risky users and risky sign-ins. Can be used to create risk based policies, such as MFA obligation.
+    * Microsoft Entra Verified ID: Issues credentials, digital signatures store at the devices and present them when needed
+
+   * Secure Acces for partners
+    * Microsoft Entra External ID: Safe access for costumer and partner facing apps
+
+   * Secure Access in any cloud: 
+    * Secure Entra Workload ID: allows workload identities - containers, applications, services that need authentication and authorization to interact with resources.
+
+   * Secure Access for AI agents
+    * Microsoft Entra Agent ID: authorizes and secures AI agents that need to interact with company resources.
+
+   * How Microsoft Entra Products Work Together: The entra products wokr in layers. A new entry into an organization uses Entra ID to singgle sign-on to corporate apps. Governance then applies security policies to his acc, suhc as MFA. Protection evaluates each entry for risk and triggers strong authentication when needed. Internet Access allows for cloud and Internet resources. Private access eliminates the need for a VPN.
+
+   * Microsoft Entra Licencing: 
+    * Microsoft Entra ID Free: provided with basic Office and Azure subscriptions. Allows for basic reporting, self service password reset and user and group management.
+    * Entra ID P1: conditional access, hybrid identity support and advanced group features. Included with Microsoft 365 E3, F1, F3, Enterprise Mobility + Security E3, and Microsoft 365 Business Premium.
+    * Entra ID P2: risk based condiftional access, entra ID Protection and Proviledged Identity Management.  Included with Microsoft 365 E5 and Enterprise Mobility + Security E5.
+    * Microsoft Entra Suit: licence that combines five entra products under a single offering, designed for organizations. s that want comprehensive identity and network access protection. A Microsoft Entra ID P1 subscription is required
+
+   * Microsoft Entra admin center: allows for administrators to configure and manage all microsofot ID products.
+
+   
