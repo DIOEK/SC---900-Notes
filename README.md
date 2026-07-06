@@ -146,4 +146,20 @@ Key storage. NEVER storage the key at the sma place as te data it encrypts. Use 
 
    * Microsoft Entra admin center: allows for administrators to configure and manage all microsofot ID products.
 
-   
+Describe Microsoft Entra ID
+ * Microsoft Entra ID is Microsoft's cloud-based identity and access management service.
+  * Internal resources, such as apps on your corporate network and intranet, and cloud apps developed by your own organization.
+  * External services, such as Microsoft 365, the Azure portal, and any SaaS applications used by your organization. 
+  * Microsoft Entra ID can be syncronized with your existing on premisses Active Directory, as I already did before.
+ 
+ * Identity Secure Store:
+  * Entra ID has a score that it measures compliance with microsoft security policies 
+
+ * Entra ID terminology
+  * Tenant: Instance of Microsoft Entra ID in which information about a single organization resides, including users, groups, devices, and application registrations. A tenant also contains access and compliance policies for resources, such as applications registered in the directory. Each tenant  has a unique tenant ID and domain name such as contoso.onmicrosoft.com.
+  * Directoty: The terms Microsoft Entra directory and Microsoft Entra tenant are often used interchangeably. The directory is a logical container within a Microsoft Entra tenant that holds and organizes the various resources and objects related to identity and access management including users, groups, applications, devices, and other directory objects.
+  * Multi-tenant:  A multitenant organization is an organization that has more than one instance of Microsoft Entra ID (such as most I work with). 
+
+ * Who uses Microsoft ENtra ID: most people that work with microsoft software. Developers use Microsoft Entra ID as a standards-based approach for adding single sign-on (SSO) to their apps, so that users can sign in with their preexisting credentials.
+ 
+ 
