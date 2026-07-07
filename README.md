@@ -172,7 +172,24 @@ Describe Microsoft Entra ID
        * Internal Guest: This scenario exists when organizations set up internal Microsoft Entra accounts for external users such as distributors or vendors, but designate them as guests by setting the user object UserType to Guest. Now this is considered a legacy scenario.
 
        * Tenant: your organization's dedicated instance of microsoft entra ID, stores users, groups, devices and other resources. Acts as a security and administrative boundary, each tenant has a unique tenant ID and domain name.
-       * Directory: logical container of the tenant, stores objects such as users, groups. Each tenatn only has one directory. A multitenant organization has more than one tenant inside     
-  * Workload Identities: 
- 
+       * Directory: logical container of the tenant, stores objects such as users, groups. Each tenatn only has one directory. A multitenant organization has more than one tenant inside   
+       
+  * Workload Identities: these are identities given to software workload. This exists because many times, software'll be needing credentials that are needed to access various resources, and from time to time, these accesses'll need to be given and/or revoqued. Microsoft Entra Workload ID takes care of this.
+  * Service principals: Service principals are identities for applications. First to app must be registered to Microsoft Entra ID, then a service principal is created in each tenant where the application is used. The service principal enables core features such as authentication and authorization of the application to resources that are secured by the Microsoft Entra tenant.
+  * Managed Identities: are a type of service principals. Automatically managed via Microsoft Entra ID eliminating the need for developers to manage credentials and  can be used without any extra cost.
+   * There are two types of managed Identities: System-assigned and User-assigned.
+    * System-assigned: Some Azure resources can be automatically assigned a identity tied to the lifecycle of the Azure resource. When the resource is deleted, the identity is deleted also.
+    * User-assigned: You may also create a managed identity as a standalone Azure resource. Once you create a user-assigned managed identity, you can assign it to one or more instances of an Azure service. With user-assigned managed identities, the identity is managed separately from the resources that use it and deleting the resource does not delete the identity.
+
+  * Agent Identity: literally identity for AI agents and their workloads. Agent identities support both attended scenarios, where the agent acts on behalf of a user, and unattended scenarios, where the agent operates autonomously. Microsoft Entra Agent ID is described in more detail in the next unit.
+
+  * Device: 
+  Microsoft Entra registered devices. The goal of Microsoft Entra registered devices is to provide users with support for bring your own device (BYOD) or mobile device scenarios.
+   * Microsoft Entra joined. A Microsoft Entra joined device is a device joined to Microsoft Entra ID through an organizational account, which is then used to sign in to the device. Microsoft Entra joined devices are generally owned by the organization.
+   * Microsoft Entra hybrid joined devices. Organizations with existing on-premises Active Directory implementations can benefit from the functionality provided by Microsoft Entra ID by implementing Microsoft Entra hybrid joined devices. These devices are joined to both your on-premises Active Directory and Microsoft Entra ID, and require an organizational account to sign in to the device.
+  
+  * Groups: Allow you to organize access to several objects at the same time. This aligns with the Zero Trust principle of limiting access to only those who need it. 
+  Microsoft 365: A Microsoft 365 group, which is also often referred to as a distribution group, is used for grouping users according to collaboration needs.
+  Security: A security group is the most common type of group and it's used to manage user and device access to shared resources.
+  
  
