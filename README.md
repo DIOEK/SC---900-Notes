@@ -161,5 +161,18 @@ Describe Microsoft Entra ID
   * Multi-tenant:  A multitenant organization is an organization that has more than one instance of Microsoft Entra ID (such as most I work with). 
 
  * Who uses Microsoft ENtra ID: most people that work with microsoft software. Developers use Microsoft Entra ID as a standards-based approach for adding single sign-on (SSO) to their apps, so that users can sign in with their preexisting credentials.
+
+ * Types of Identities
+  * There are three types of identities: human or user identities, the identities of physical devices, such as phones, desktops and IoT devices, and lastly, software based identities, such as apps, VM's, services and containers. These are workload identities.
+     * User identities: represents people, such as employees and external users, such as customers or consultants. User identities can be classified by how they authenticate, such as internal or external, relative to the organization tenancy. Internal means that the organization has an account inside the orgranization. External means that he authenticates via en external Microsoft ID account, social network account or external account, such as google account.
+      * User types: 
+       * Internal member: typically considered employees of the organization. The object contained in the resources has UserType of Member.
+       * External member: Object has UserType of Guest. Generally pertaning to guest, external users, providers, or people authenticatiing via some social network.
+       * Internal Guest: This scenario is common in organizations consisting of multiple tenants. Members of a different company can authenticate inside a another company for example. UserType defined as member.
+       * Internal Guest: This scenario exists when organizations set up internal Microsoft Entra accounts for external users such as distributors or vendors, but designate them as guests by setting the user object UserType to Guest. Now this is considered a legacy scenario.
+
+       * Tenant: your organization's dedicated instance of microsoft entra ID, stores users, groups, devices and other resources. Acts as a security and administrative boundary, each tenant has a unique tenant ID and domain name.
+       * Directory: logical container of the tenant, stores objects such as users, groups. Each tenatn only has one directory. A multitenant organization has more than one tenant inside     
+  * Workload Identities: 
  
  
