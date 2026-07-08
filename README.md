@@ -214,5 +214,14 @@ Describe Microsoft Entra ID
  * Identity governance: provides lifecycle management, inclusind access assignment and compliance reporting.
  * Agent registry: centralized metadata management and secure agent discovery maintain visibility into all agents operating in their tenant.
 
+* Describe hybrid identity: many businesses, and corporations are still a mixture of on-premises and cloud applications.
+ * Microsoft’s identity solutions span on-premises and cloud-based capabilities. These solutions create a common identity for authentication and authorization to all resources, regardless of location. We call this hybrid identity.
+ *  Hybrid identity
+  * Inter-directory provisioning: provisioning an identity between two different directory service systems. The most common scenario is when an Active Directory user is also provisioned into Microsoft 365 ID.
+  * Synchronization maches the cloud to the offline stuff.
+  Microsoft Entra Cloud Sync is Microsoft's recommended synchronization tool for accomplishing hybrid identity. It uses a lightweight cloud provisioning agent that acts as a bridge between Microsoft Entra ID and Active Directory.
+
+  Microsoft Entra Connect Sync is an earlier on-premises synchronization tool that's being replaced by Cloud Sync.
+
   
  
