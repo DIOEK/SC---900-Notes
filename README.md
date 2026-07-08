@@ -191,5 +191,28 @@ Describe Microsoft Entra ID
   * Groups: Allow you to organize access to several objects at the same time. This aligns with the Zero Trust principle of limiting access to only those who need it. 
   Microsoft 365: A Microsoft 365 group, which is also often referred to as a distribution group, is used for grouping users according to collaboration needs.
   Security: A security group is the most common type of group and it's used to manage user and device access to shared resources.
+
+* Describe Microsoft Entra Agent ID:
+ * AI angents also need dedicated ID. While software work on hardcoded logic, AI agents might be less predictable.
+  * Expanded attack surface: Since the agent freely interact with apps and other types of external systems, there are new pathways that can lead to attacks, such as prompt injections, that work on new ways.
+  * Permission risks: Agents generally have broad permissions, so, it might access more that than necessary without proper controls.
+  * Agent Sprawl: Uncontrolled expansion of agents across an organization, without adequate visibility, management, or lifecycle controls, can lead to security and compliance risks. Agents created for temporary purposes may remain in production indefinitely, with permissions that are rarely reviewed.
+
+* How Microsoft Entra ID works:
+  * Agent identity blueprints: serve as reusable templates that define e type or class of agents. It can even serve to hold the blue´rint to create more agents, making it very, very fast and agile to do so.
+  * Agent identities: are individual blueprints to AI. Each identity has a unique identifier in Microsoft Entra ID, a display name and a sponsor, meaning a user or grouresponsible for the agent. They don't hold their own credentials, but requite the blueprint to as for  tokens on their behalf.
+
+ * This blueprint-to-identity model enables centralized management while providing the flexibility needed for diverse AI agent deployment scenarios. Administrators can apply conditional access policies, disable permissions, or audit agents at scale through blueprint-based controls. Also Microsoft Entra Agent ID is platform agnostic, works on microsoft agents and also any kind of agent.
+
+* Microsoft Authentication works on two scenarios, attended an unatended:
+ * Atended: This agents acts on beahlf and with the guidance of a human user
+ * Unatended: This agent has more authonomy
+
+* Governance and Identity:
+ * Conditional access: enables policy-based access controls and risk-based authentication specifically for agents. Administrators can create policies that evaluate agent risk before granting access.
+ * Identity protection: provides real time threat detection and risk response for AI agents
+ * Identity governance: provides lifecycle management, inclusind access assignment and compliance reporting.
+ * Agent registry: centralized metadata management and secure agent discovery maintain visibility into all agents operating in their tenant.
+
   
  
