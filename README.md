@@ -223,5 +223,7 @@ Describe Microsoft Entra ID
 
   Microsoft Entra Connect Sync is an earlier on-premises synchronization tool that's being replaced by Cloud Sync.
 
+* Describing authentication methods:
+ * 
   
  
