@@ -223,7 +223,76 @@ Describe Microsoft Entra ID
 
   Microsoft Entra Connect Sync is an earlier on-premises synchronization tool that's being replaced by Cloud Sync.
 
-* Describing authentication methods:
- * 
-  
- 
+Security copilot: Basicamente um copylot que pode ajudar em várias funções de segurança 
+Introdução ao Microsoft Security Copilot, uma ferramenta de análise de segurança baseada em nuvem e alimentada por IA que permite que os analistas respondam rapidamente às ameaças, processem sinais na velocidade do computador e avaliem os riscos mais rapidamente do que seria possível.
+
+Investigue e corrija ameaças de segurança - obtenha contexto para incidentes para classificar rapidamente alertas de segurança complexos em resumos acionáveis e remedie mais rapidamente com orientação de resposta passo a passo
+Crie consultas na Linguagem de Consulta Kusto (KQL) ou analise scripts suspeitos — elimine a necessidade de escrever manualmente scripts na linguagem de consulta ou de realizar engenharia reversa em scripts de malware, utilizando a tradução em linguagem natural para permitir que cada membro da equipe execute tarefas técnicas.
+Entenda os riscos e gerencie a postura de segurança da organização - obtenha uma visão ampla do seu ambiente com riscos priorizados para descobrir oportunidades de melhorar a postura com mais facilidade
+Solucione problemas de TI mais rapidamente - sintetize informações relevantes rapidamente e receba insights acionáveis para identificar e resolver problemas de TI rapidamente
+Definir e gerenciar políticas de segurança - definir uma nova política, fazer referência cruzada com outras para verificar conflitos e resumir as políticas existentes para gerenciar o contexto organizacional complexo de forma rápida e fácil
+Configure fluxos de trabalho de ciclo de vida seguros - crie grupos e defina parâmetros de acesso com orientação passo a passo para garantir uma configuração perfeita para evitar vulnerabilidades de segurança
+Desenvolver relatórios para as partes interessadas - obter um relatório claro e conciso que resuma o contexto e o ambiente, questões em aberto e medidas de proteção preparadas para o tom e a linguagem do público do relatório
+
+Funciona como um LLM baseado na OpenAI, dados não são utilizados para treinar modelos de IA sendo tratados como privativos
+Sessão – uma conversa específica no Copilot. O Copilot mantém o contexto em uma sessão.
+Prompt – Uma instrução ou pergunta específica em uma sessão. Um usuário insere um prompt na barra de prompts.
+Funcionalidade – uma função que o Copilot usa para resolver parte de um problema. Uma capacidade às vezes pode ser referida como uma habilidade.
+Plug-in – um conjunto de funcionalidades de um recurso específico.
+Espaço de trabalho- os espaços de trabalho do Copilot são ambientes de trabalho separados do Copilot dentro do locatário no qual sua instância do Copilot está operando.
+Agentes - Os agentes do Microsoft Security Copilot são ferramentas de IA que gerenciam tarefas de TI e segurança de forma autônoma, melhorando a resposta a ameaças, reduzindo cargas de trabalho manuais e melhorando a eficiência em operações de segurança cibernética em escala.
+Orchestrator – sistema do Copilot para compor recursos em conjunto para responder ao prompt de um usuário.
+
+ Workspaces
+
+Os espaços de trabalho do Copilot são ambientes de trabalho separados do Copilot dentro do locatário no qual sua instância do Copilot está operando.
+
+Para ajudá-lo a entender melhor o conceito de workspaces, usamos a analogia da casa com várias salas. Cada sala é configurada para ser otimizada para sua função e para as pessoas que usam essa sala. Quando alguém entra na casa, pode ter acesso a alguns quartos, mas não a outros.
+ Orquestrador
+
+O orquestrador é o sistema do Copilot para compor recursos em conjunto para responder ao prompt de um usuário. Essa função é ilustrada em mais detalhes na unidade subsequente, que descreve como o Copilot processa solicitações de prompt.
+
+Enviar um prompt: o processo começa quando um usuário envia um prompt na barra de prompts.
+
+Orquestrador: o Security Copilot envia as informações para o backend do Copilot conhecido como orquestrador. O orquestrador é o sistema do Copilot para compor recursos em conjunto para responder à solicitação de um usuário. Ele determina o contexto inicial e constrói um plano usando todos os recursos disponíveis (habilidades).
+
+Contexto de criação: depois que um plano é definido e criado, o Copilot executa esse plano para obter o contexto de dados necessário para responder ao prompt.
+
+Plug-ins: durante a execução do plano, o Copilot analisa todos os dados e padrões para fornecer insights inteligentes. Isso inclui a análise de todos os plug-ins e fontes de dados, habilitados e disponíveis para o Copilot.
+
+Respondendo: o Copilot combina todos os dados e o contexto e utiliza o poder de seu LLM avançado para compor uma resposta que utiliza uma linguagem que faça sentido para um ser humano.
+
+Resposta: antes que a resposta possa ser enviada de volta ao usuário, o Copilot formata e analisa a resposta como parte do compromisso da Microsoft com a IA responsável.
+
+Recebimento da resposta: o processo culmina com o usuário recebendo a resposta do Copilot.
+
+
+Log do processo: todo o processo descrito acima fica salvo em um LOG do processo. 
+Descreva os elementos de um prompt eficaz
+
+Meta – informações específicas relacionadas à segurança de que você precisa
+Contexto – por que você precisa dessas informações ou como usá-la
+Expectativas – formato ou público-alvo para o qual você deseja que a resposta seja adaptada
+Origem – informações conhecidas, fontes de dados ou plug-ins que o Copilot deve usar
+
+Descrever como habilitar o Microsoft Security Copilot:
+Identificar sua categoria de cliente
+Provisionar capacidade do Copilot (se necessário)
+Configurar o ambiente padrão
+Atribuir permissões de função
+
+Identificar sua categoria de cliente: Microsoft 365 E5 e E7 - O Security Copilot está incluído com sua licença do Microsoft 365 E5 e E7 não é necessário configuração do Azure nem provisionamento manual de capacidade.
+Para cliente não Microsoft do E5 e E7: Se o Security Copilot não estiver incluído na sua licença, você deverá seguir as etapas de integração manual
+
+Para os clientes não Microsoft 365 E5 e E7, o Security Copilot funciona com uma capacidade provisionada e um modelo de excedente. A capacidade aprovisionada é faturada por hora, enquanto a capacidade de utilização excedida é faturada na utilização. pode alocar uma quantidade de utilização excedida para garantir que existem SCUs adicionais disponíveis quando as unidades aprovisionadas inicialmente estão esgotadas durante picos inesperados de cargas de trabalho.
+
+Antes que os usuários possam começar a usar o Copilot, os administradores precisam provisionar e alocar a capacidade. Para provisionar a capacidade:
+
+    Você deve ter uma assinatura do Azure.
+
+    Você precisa ser um proprietário do Azure ou colaborador do Azure, em um nível de grupo de recursos, no mínimo.
+
+    Você precisa ser um Administrador de Segurança ou superior no locatário onde o Security Copilot está sendo integrado.
+
+   
+
