@@ -294,5 +294,8 @@ Antes que os usuários possam começar a usar o Copilot, os administradores prec
 
     Você precisa ser um Administrador de Segurança ou superior no locatário onde o Security Copilot está sendo integrado.
 
+Microsoft Entra ID Governance
+
+Leverages AI driven insights to help organizations automatically ensure that the right people have access to the right stuff inside a clouda
    
 
