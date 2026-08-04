@@ -298,6 +298,52 @@ Microsoft Entra ID Governance
 
 Leverages AI driven insights to help organizations automatically ensure that the right people have access to the right stuff inside a clouda
 
+Introdução aos princípios de privacidade de Microsoft Purview e Microsoft
+Service Trust portal
+
+Microsoft Service Trust Portal - hub for security and compliance in microsoft cloud services. Provides content, tools, and other resources.
+
+Accessing the Service Trust Portal
+
+To access some of the resources on the Service Trust Portal, you must sign in as an authenticated user with your Microsoft cloud services account (Microsoft Entra organization account).
+
+Service Trust Portal Content Categories - 
+The Service Trust Portal landing page includes content that is organized into the following categories:
+
+    Certifications, Regulations, and Standards
+    Reports, Whitepapers, and Artifacts
+    Industry and Regional Resources
+    Resources for your Organization
+
+Certifications, Regulations, and Standards
+The certification, regulations, and standards section of the STP provides a wealth of security implementation and design information with the goal of making it easier for you to meet regulatory compliance objectives by understanding how Microsoft Cloud services keep your data secure.
+
+Reports, Whitepapers, and Artifacts -
+BCP and DR - Business Continuity and Disaster Recovery
+Pen Test and Security Assessments - Attestation of Penetration tests and security assessments conducted by third parties
+Privacy and Data Protection - Privacy and Data Protection Resources
+FAQ and Whitepapers - Whitepapers and answers to frequently asked questions
+
+Industry and Regional Resources -
+Financial Services - Resources elaborating regulatory compliance guidance for FSI (by country/region)
+Healthcare and Life Sciences - Capabilities offered by Microsoft for Healthcare Industry
+Media and Entertainment - Media and Entertainment Industry Resources
+United States Government - Resources exclusively for US Government customers
+Regional Resources - Documents describing compliance of Microsoft's online services with various regional policies and regulations
+
+Resources for your Organization - Here starts to get interesting, here are resources tour organization only has access
+This section lists documents applying to your organization (restricted by tenant) based on your organization’s subscription and permissions.
+
+My Library - Service Trust Portal to your My Library
+You can annex other articles of interest here and  be notified when microsoft updates it
+
+Microsoft's privacy principles
+Microsoft's commitment to data privacy - four areas: data control, data location, data security, and data defense.
+
+Client data belongs to the client and can be freely controled by him
+Microsoft will not use client data without your permission and only uses cliente data with the services that the client agrees to. It does not use data for marketing and also partners and subcontractor must follow the same rules and compliance that microsoft follows. Microsoft is also in compliance with mayn security laws and conventions such as ISO/IEC 27018.
+
+Know where your data is located - Through options available in services such as Microsoft Azure, Microsoft Dynamics 365, and Microsoft 365, you can determine where you want your data stored. You choose also where, geographycally speaking your data'll be,
 
 
 
